@@ -40,7 +40,8 @@ class LifeCycleComponents extends Component {
     console.log("componentDidCatch", error, info);
   }
   render() {
-    return <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    return <View 
+    style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>{this.state.name}</Text>
       <Text>{this.state.count}</Text>
       <Button 
