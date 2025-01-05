@@ -4,6 +4,7 @@ import React from 'react'
 import LifeCycleComponents from './src/components/ClassComponents'
 import FunctionalComponents from './src/components/FunctionalComponents'
 import BasicComponents from './src/components/BasicComponents'
+import Hooks from './src/hooks/Hooks'
 
 
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
     <View style={styles.container}>
       {/* <LifeCycleComponents /> */}
       {/* <FunctionalComponents /> */}
-      <BasicComponents />
+      {/* <BasicComponents /> */}
+      <Hooks />
      
     </View>
 
