@@ -4,20 +4,18 @@ import React from 'react'
 import LifeCycleComponents from './src/components/ClassComponents'
 import FunctionalComponents from './src/components/FunctionalComponents'
 import BasicComponents from './src/components/BasicComponents'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-
 
 
 const App = () => {
   return (
-    <SafeAreaProvider>
+
     <View style={styles.container}>
       {/* <LifeCycleComponents /> */}
       {/* <FunctionalComponents /> */}
       <BasicComponents />
      
     </View>
-    </SafeAreaProvider>
+
   )
 }
 
