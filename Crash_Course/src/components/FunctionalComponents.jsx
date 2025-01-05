@@ -12,14 +12,16 @@ const FunctionalComponents = () => {
 
 
     useEffect(() => {
+        console.log('Count Updated');
+        
         if(count === 5){
             Alert.alert('Count reached 5')
         }
     },[count])
     
     return (
+ 
         <View>
-            <SafeAreaView/>
             <Text style={{
                 fontSize: 20,
                 color: 'white',
@@ -31,6 +33,7 @@ const FunctionalComponents = () => {
                 <Text>Increase</Text>
             </TouchableOpacity>
         </View>
+    
     )
 }
 
