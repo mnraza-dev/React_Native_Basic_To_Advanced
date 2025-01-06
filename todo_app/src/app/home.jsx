@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import Header from "./../components/Header"
 import AddButton from '../components/AddButton';
 import { screenWidth, screenHeight } from "../utils/contants";
-import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -30,7 +29,7 @@ const Home = () => {
 
             name="trash"
             size={32}
-            color="#791E94" />
+            color="#FF0000" />
 
         </View>
       </View >
@@ -124,7 +123,7 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     paddingHorizontal: 14,
     height: 80,
-    backgroundColor: '#defaea',
+    backgroundColor: 'transparent',
     width: '25%',
     gap: 10,
     borderBottomRightRadius: 12,
