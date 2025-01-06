@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Alert, Dimensions, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import Header from '../components/Header'
 import AddButton from '../components/AddButton'
@@ -11,6 +11,10 @@ const AddTodo = () => {
 
 
     const submit = async () => {
+        if(value.trim() == ''  || description.trim() == '') {
+            Alert.alert('Please fill all the fields')
+        }
+
 
     }
     return (
