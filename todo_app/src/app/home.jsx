@@ -1,10 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-
+import { Link } from 'expo-router'
+import { useSelector } from 'react-redux';
+import Header from "./../components/Header"
 const Home = () => {
+  const data = useSelector(state => state.todo.data);
+  console.log(data);
+
   return (
     <View>
-      <Text>Home Screen</Text>
+      <Header title="Todo App" isBackButton={true}/>
+      <Text>Home 2 screen </Text>
+     
     </View>
   )
 }

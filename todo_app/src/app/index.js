@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useFonts } from 'expo-font'
 import Logo from '../assets/images/adaptive-icon.png';
-import { screenHeight, screenWidth } from '../utils/contants.js'
+import { screenHeight, screenWidth } from '../utils/contants'
 import { resetAndNavigate } from '../utils/helpers.js';
 
 const Main = () => {
