@@ -21,13 +21,16 @@ const Home = () => {
         </View>
         <View style={styles.iconsContainer}>
           <MaterialCommunityIcons
+          onPress={() => onEdit(item)}
             name="pencil-circle"
             size={32}
             color="#791E94" />
           <Ionicons
+          onPress={() => onDelete(item)}
+
             name="trash"
             size={32}
-            color="black" />
+            color="#791E94" />
 
         </View>
       </View >
