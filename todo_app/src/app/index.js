@@ -25,7 +25,7 @@ const Main = () => {
 
   return (
     <View>
-      <Image style={styles.LogoImage} source={require(Logo)} />
+      <Image style={styles.LogoImage} source={Logo} />
     </View>
   )
 }
