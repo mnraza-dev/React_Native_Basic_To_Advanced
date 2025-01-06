@@ -30,7 +30,7 @@ export default Header
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'purple',
+        backgroundColor: '#2F004F',
         padding: 12,
     },
     TextTitle: {

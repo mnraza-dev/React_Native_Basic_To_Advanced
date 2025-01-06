@@ -23,14 +23,14 @@ const styles = StyleSheet.create({
         position: 'absolute',
         bottom: 25,
         right: 20,
-        backgroundColor: 'purple',
+        backgroundColor: '#2F004F',
         shadowRadius: 2,
         shadowOpacity: 0.7,
         shadowOffset: {
             width: 1,
             height: 1
         },
-        shadowColor: '#000',
+        shadowColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
         elevation: 10,
