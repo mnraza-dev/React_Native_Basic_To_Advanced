@@ -4,7 +4,7 @@ import React from 'react'
 const App = (): React.JSX.Element => {
   return (
     <View style={styles.container}>
-      <Text>App</Text>
+      <Text style={styles.pageTitle}>Todo App</Text>
     </View>
   )
 }
@@ -17,5 +17,8 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: 'lightblue',
+  },
+  pageTitle: {
+      fontSize: 30
   }
 })
