@@ -2,6 +2,7 @@ import { Alert, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'r
 import React from 'react'
 // import { AntDesign } from '@expo/vector-icons'
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { router } from 'expo-router';
 
 const Header = ({ title, isBackButton }) => {
     return (
@@ -13,9 +14,7 @@ const Header = ({ title, isBackButton }) => {
                 {
                     isBackButton &&
                     <TouchableOpacity
-                        onPress={() => {
-                            Alert.alert('went back')
-                        }}
+                        onPress={() => router.back()}
                         style={styles.backBtn}>
                         <Text>
                             <AntDesign name="back" size={24} color="white" />

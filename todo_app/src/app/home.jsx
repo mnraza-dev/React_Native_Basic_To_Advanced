@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <Header title="Todo App" isBackButton={true} />
+      <Header title="Todo App" isBackButton={false} />
       <Text>Home 2 screen </Text>
 
       <AddButton />

@@ -27,7 +27,7 @@ const Main = () => {
 
   if (!loaded) {
     // You can add a loading spinner or a fallback UI here until fonts load
-    return <ActivityIndicator />;
+    return <Text>....Loading</Text>
   }
 
   return (

@@ -1,20 +1,18 @@
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'
+import { navigate } from 'expo-router/build/global-state/routing'
+import { router } from 'expo-router'
 
 const AddButton = () => {
     return (
-
         <TouchableOpacity
-            onPress={() => {
-                Alert.alert('add todo task ')
-            }}
+            onPress={() => router.navigate('/addtodo')}
             style={styles.AddButton}>
             <Text>
-                <MaterialCommunityIcons name="plus" size={24} color="#fff" />
+                <MaterialCommunityIcons name="plus" size={32} color="#fff" />
             </Text>
         </TouchableOpacity>
-
     )
 }
 
@@ -23,8 +21,8 @@ export default AddButton
 const styles = StyleSheet.create({
     AddButton: {
         position: 'absolute',
-        bottom: 16,
-        right: 16,
+        bottom: 25,
+        right: 20,
         backgroundColor: 'purple',
         shadowRadius: 2,
         shadowOpacity: 0.7,
