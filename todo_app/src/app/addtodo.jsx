@@ -5,6 +5,7 @@ import AddButton from '../components/AddButton'
 import CustomButton from '../components/CustomButton'
 import { useDispatch } from 'react-redux'
 import { addTodo } from "../redux/reducers/todoSlice"
+import { router } from 'expo-router'
 const AddTodo = () => {
     const w = Dimensions.get('window').width;
 
@@ -22,6 +23,8 @@ const AddTodo = () => {
             title: value,
             desc: description
         }))
+
+        router.back();
 
 
     }

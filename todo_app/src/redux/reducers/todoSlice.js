@@ -10,8 +10,8 @@ export const todoSlice = createSlice({
         addTodo: (state, action) => {
             const todoData = {
                 id: state.data?.length + 1,
-                title: action.title,
-                desc: action.desc,
+                title: action.payload.title,
+                desc: action.payload.desc,
 
             }
             state.data = [todoData, ...state.data]
