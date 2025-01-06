@@ -2,12 +2,8 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import TodoInput from './src/components/TodoInput'
 import TodoList from './src/components/TodoList'
-interface Todo {
-  id: string,
-  text: string,
-  completed: boolean
+import { Todo } from './src/types'
 
-}
 const App = (): React.JSX.Element => {
 
   const [todoList, setTodoList] = useState<Todo[]>([]);
@@ -31,7 +27,7 @@ const App = (): React.JSX.Element => {
       <Text style={styles.pageTitle}>Todo App</Text>
 
       <TodoInput onAddTodo={addTodo} />
-      <TodoList />
+      <TodoList todoList={todoList} />
     </View>
   )
 }
