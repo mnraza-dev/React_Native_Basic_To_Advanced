@@ -1,8 +1,10 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useFonts } from 'expo-font'
-import Logo from '../assets/images/icon.png';
-import { screenHeight, screenWidth } from '../utils/contants'
+import Logo from '../assets/images/adaptive-icon.png';
+import { screenHeight, screenWidth } from '../utils/contants.js'
+import { resetAndNavigate } from '../utils/helpers.js';
+
 const Main = () => {
   const [loaded] = useFonts(
     {
@@ -14,9 +16,15 @@ const Main = () => {
 
   useEffect(() => {
     if (loaded && !hasNavigated) {
-    const timeout =  setTimeout(() => {
-       naviga
-     }, 1000);
+      const timeout = setTimeout(() => {
+        console.log('timeout');
+        resetAndNavigate('/home');
+
+      }, 1000);
+
+      return () => {
+        clearTimeout(timeout);
+      }
     }
   }, [hasNavigated])
 
@@ -24,23 +32,26 @@ const Main = () => {
 
 
   return (
-    <View>
-      <Image style={styles.LogoImage} source={Logo} />
+    <View style={styles.container}>
+
+      <View>
+        <Image style={styles.LogoImage} source={Logo} />
+      </View>
     </View>
   )
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    // backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'SpaceMono'
 
   },
   LogoImage: {
-    width: screenWidth * 0.3,
-    height: screenHeight * 0.15,
+    height: screenHeight * 0.3,
+    width: screenWidth * 0.4,
   }
 })
 
