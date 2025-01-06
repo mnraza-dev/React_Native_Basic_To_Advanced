@@ -15,7 +15,9 @@ const Home = () => {
 
    // Delete handler
    const onDeleteHandler = (id) => {
-    dispatch(deleteTodo(id));  
+    console.log('Deleting todo with id:', id);  // Add this log
+    dispatch(deleteTodo(id));
+ 
   };
   const data = useSelector(state => state.todo.data);
   console.log(data);
