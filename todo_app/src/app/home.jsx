@@ -1,17 +1,26 @@
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Link } from 'expo-router'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Header from "./../components/Header"
 import AddButton from '../components/AddButton';
 import { screenWidth, screenHeight } from "../utils/contants";
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Ionicons from '@expo/vector-icons/Ionicons';
-
+import { deleteTodo } from '../redux/reducers/todoSlice';
 const Home = () => {
+
+
+  const dispatch = useDispatch();
+
+   // Delete handler
+   const onDeleteHandler = (id) => {
+    dispatch(deleteTodo(id));  
+  };
   const data = useSelector(state => state.todo.data);
   console.log(data);
-  const renderTodoItem = ({ item, onEdit, onDelete }) => (
+
+  const renderTodoItem = ({ item }) => (
     <View style={styles.item}>
       <View style={styles.itemContent}>
         <View style={styles.TextContainer}>
@@ -20,12 +29,13 @@ const Home = () => {
         </View>
         <View style={styles.iconsContainer}>
           <MaterialCommunityIcons
-          onPress={() => onEdit(item)}
+            onPress={() => onEdit(item)}
             name="pencil-circle"
             size={32}
             color="#791E94" />
           <Ionicons
-          onPress={() => onDelete(item)}
+            onPress={() =>
+              onDeleteHandler(item.id)}
 
             name="trash"
             size={32}
