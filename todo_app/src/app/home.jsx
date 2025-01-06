@@ -9,16 +9,23 @@ const Home = () => {
   console.log(data);
 
   return (
-    <View>
-      <Header title="Todo App" isBackButton={true}/>
+    <View style={styles.container}>
+      <Header title="Todo App" isBackButton={true} />
       <Text>Home 2 screen </Text>
 
       <AddButton />
-     
+
     </View>
   )
 }
 
 export default Home
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    // backgroundColor: '#fff',
+    // position: 'relative',
+
+  }
+})

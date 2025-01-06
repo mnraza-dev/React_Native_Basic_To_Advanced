@@ -1,22 +1,20 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { AntDesign } from '@expo/vector-icons'
+import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'
 
 const AddButton = () => {
     return (
-        <View>
-            <TouchableOpacity
-                onPress={() => {
-                    Alert.alert('went back')
-                }}
-                style={styles.AddButton}>
-                <Text>
-                    <AntDesign
-                        name="pluscircle"
-                        size={32} color="white" />
-                </Text>
-            </TouchableOpacity>
-        </View>
+
+        <TouchableOpacity
+            onPress={() => {
+                Alert.alert('add todo task ')
+            }}
+            style={styles.AddButton}>
+            <Text>
+                <MaterialCommunityIcons name="plus" size={24} color="#fff" />
+            </Text>
+        </TouchableOpacity>
+
     )
 }
 
@@ -25,8 +23,8 @@ export default AddButton
 const styles = StyleSheet.create({
     AddButton: {
         position: 'absolute',
-        bottom: 10,
-        right: 10,
+        bottom: 16,
+        right: 16,
         backgroundColor: 'purple',
         shadowRadius: 2,
         shadowOpacity: 0.7,
@@ -36,8 +34,12 @@ const styles = StyleSheet.create({
         },
         shadowColor: '#000',
         alignItems: 'center',
-        justifyContent:'center',
-        
+        justifyContent: 'center',
+        elevation: 10,
+        padding: 10,
+        borderRadius: 50
+
+
 
     }
 })
