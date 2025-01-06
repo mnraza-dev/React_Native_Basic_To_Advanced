@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { useFonts } from 'expo-font'
-
+import Logo from '../assets/images/icon.png';
 const Main = () => {
 
   const { loaded } = useFonts(
@@ -12,7 +12,7 @@ const Main = () => {
 
   return (
     <View>
-      <Text>Index</Text>
+     <Image source={require(Logo)} />
     </View>
   )
 }
