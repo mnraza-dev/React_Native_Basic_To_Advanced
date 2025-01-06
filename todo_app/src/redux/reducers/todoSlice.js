@@ -6,9 +6,19 @@ export const todoSlice = createSlice({
         data: [],
 
     },
-    reducers:{
+    reducers: {
+        addTodo: (state, action) => {
+            const todoData = {
+                id: state.data?.length + 1,
+                title: action.title,
+                desc: action.desc,
+
+            }
+            state.data = [todoData, ...state.data]
+        }
 
     }
 });
+export const { addTodo } = todoSlice.actions
 
 export default todoSlice.reducer;

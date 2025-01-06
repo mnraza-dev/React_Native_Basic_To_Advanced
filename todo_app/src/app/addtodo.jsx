@@ -3,17 +3,25 @@ import React, { useState } from 'react'
 import Header from '../components/Header'
 import AddButton from '../components/AddButton'
 import CustomButton from '../components/CustomButton'
+import { useDispatch } from 'react-redux'
+import { addTodo } from "../redux/reducers/todoSlice"
 const AddTodo = () => {
     const w = Dimensions.get('window').width;
+
+    const dispatch = useDispatch();
     const [value, setValue] = useState('');
     const [description, setDescription] = useState('');
 
 
 
     const submit = async () => {
-        if(value.trim() == ''  || description.trim() == '') {
+        if (value.trim() == '' || description.trim() == '') {
             Alert.alert('Please fill all the fields')
         }
+        dispatch(addTodo({
+            title: value,
+            desc: description
+        }))
 
 
     }
@@ -34,7 +42,7 @@ const AddTodo = () => {
                 placeholder='Enter a Task description'
                 value={description}
                 onChangeText={(text) => setDescription(text)} />
-            <CustomButton title="Add Todo" onPress={submit}/>
+            <CustomButton title="Add Todo" onPress={submit} />
 
         </View>
     )
@@ -57,8 +65,8 @@ const styles = StyleSheet.create({
 
     },
 
-   
- 
+
+
     minHeight: {
         minHeight: 120
     }
