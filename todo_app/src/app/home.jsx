@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'expo-router'
 import { useSelector } from 'react-redux';
 import Header from "./../components/Header"
+import AddButton from '../components/AddButton';
 const Home = () => {
   const data = useSelector(state => state.todo.data);
   console.log(data);
@@ -11,6 +12,8 @@ const Home = () => {
     <View>
       <Header title="Todo App" isBackButton={true}/>
       <Text>Home 2 screen </Text>
+
+      <AddButton />
      
     </View>
   )
