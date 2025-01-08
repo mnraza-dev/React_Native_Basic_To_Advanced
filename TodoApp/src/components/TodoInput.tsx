@@ -24,7 +24,9 @@ const TodoInput: React.FC<TodoInputProps> = ({ onAddTodo }) => {
                 placeholder='Enter a Todo Name'
             />
             <TouchableOpacity style={styles.addBtn} onPress={handleAddTodo}>
-                <Text style={styles.btnText}>Add Todo</Text>
+                <Text style={[styles.btnText, {
+                    color: 'red',
+                }]}>Add Todo</Text>
             </TouchableOpacity>
         </View>
     )
@@ -35,6 +37,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         width: '100%',
+        marginBottom: 20,
 
     },
     textInput: {
@@ -50,16 +53,18 @@ const styles = StyleSheet.create({
     },
     addBtn: {
         width: '20%',
-        backgroundColor: 'green',
+        borderWidth: 2,
+        borderColor: 'green',
         borderRadius: 10,
         paddingHorizontal: 10,
         marginLeft: 10,
         alignItems: 'center',
         justifyContent: 'center',
+        color: 'green',
     },
     btnText: {
         fontSize: 14,
-        color: '#fff',
+        color: 'green',
         fontWeight: 'bold',
     }
 });

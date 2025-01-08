@@ -13,21 +13,24 @@ const App = (): React.JSX.Element => {
 
     setTodoList([...todoList,
     {
-      id: Math.random().toString(),
+      id: Date.now().toString(),
       text,
       completed: false
     }])
 
     console.log(todoList);
-
-
   }
+
+  const deleteTodo = (id: string) => {
+    setTodoList(todoList.filter((todo) => todo.id !== id))
+  }
+  
   return (
     <View style={styles.container}>
       <Text style={styles.pageTitle}>Todo App</Text>
 
       <TodoInput onAddTodo={addTodo} />
-      <TodoList todoList={todoList} />
+      <TodoList todoList={todoList} onDeleteTodo={deleteTodo} />
     </View>
   )
 }
@@ -41,8 +44,9 @@ const styles = StyleSheet.create({
   },
   pageTitle: {
     paddingVertical: 20,
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: 'black',
+    fontSize: 28,
+    fontWeight: 'semibold',
+    color: '#fff',
+
   }
 })

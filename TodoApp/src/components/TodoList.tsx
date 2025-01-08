@@ -3,15 +3,18 @@ import React from 'react'
 import TodoItem from './TodoItem'
 import { Todo } from '../types'
 interface TodoListProps {
-  todoList: Todo[]
+  todoList: Todo[],
+  onDeleteTodo: (id: string) => void
 }
-const TodoList: React.FC<TodoListProps> = ({ todoList }) => {
+
+
+const TodoList: React.FC<TodoListProps> = ({ todoList, onDeleteTodo }) => {
   return (
     <ScrollView style={styles.scrollViewStyle}>
 
       {
         todoList.map((todo) => (
-          <TodoItem todoItem={todo} key={todo.id} />
+          <TodoItem onDelete={()=> onDeleteTodo(todo.id)} todoItem={todo} key={todo.id} />
         ))
       }
 
