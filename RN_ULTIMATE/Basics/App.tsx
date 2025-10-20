@@ -1,24 +1,26 @@
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 
 const App = () => {
-  const [name, setName] = useState('Your Name')
+  const [text, setText] = useState('');
+  const [name, setName] = useState('');
 
   const greet = (newName) => {
     setName(newName)
+     Alert.alert('✅ Success', `Name updated to "${newName}"`)
   }
 
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>{name}</Text>
       <TextInput
-        onChangeText={(text) => setName(text)}
-        value={name}
+        onChangeText={(txt) => setText(txt)}
+        value={text}
         placeholder="Enter Your Name"
         style={styles.textInput}
       />
 
-      <Button color={'green'} title="Update Name" onPress={() => greet('MN Raza')} />
+      <Button color={'green'} title="Update Name" onPress={() => greet(text)} />
     </View>
   )
 }
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
     padding: 12,
     borderWidth: 1,
     borderColor: '#ccc',
-    borderRadius: 10,
+    borderRadius: 12,
     marginBottom: 20,
   },
 })
