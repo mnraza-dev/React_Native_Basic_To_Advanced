@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import React, { useState, useEffect } from 'react';
 
 const EffectsExample = () => {
@@ -8,7 +8,6 @@ const EffectsExample = () => {
         console.warn('useEffect called — count changed:', count);
     }, [count]);
 
-
     return (
         <View style={styles.container}>
             <Text style={styles.heading}>useEffects in React Native</Text>
@@ -16,12 +15,9 @@ const EffectsExample = () => {
             <Text style={{ fontSize: 36, textAlign: 'center', marginBottom: 10, marginTop: 40, }}>Count: {count}</Text>
             <TouchableOpacity style={styles.btn} onPress={() => {
                 setCount(count + 1)
-
             }}>
-                <Text style={styles.btnText}>➕ Tap to Increase</Text>
+            <Text style={styles.btnText}>➕ Tap to Increase</Text>
             </TouchableOpacity>
-
-
         </View>
     );
 };
