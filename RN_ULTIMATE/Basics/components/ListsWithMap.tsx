@@ -21,7 +21,7 @@ const ListsWithMap = () => {
             <Text style={styles.heading}>Lists with Map() function in React Native</Text>
 
             <ScrollView style={{
-                marginBottom: 60,
+                marginBottom: 200,
             }}>
                 {
                     users.map((item) => <View key={item.id} style={styles.card}>

@@ -4,6 +4,7 @@ import Forms from './components/Forms'
 import Lists from './components/Lists'
 import EffectsExample from './components/EffectsExample'
 import ListsWithMap from './components/ListsWithMap'
+import DynamicGrid from './components/DynamicGrid'
 
 const App = () => {
   return (
@@ -11,8 +12,8 @@ const App = () => {
       {/* <Forms/> */}
       {/* <Lists/> */}
       {/* <EffectsExample/> */}
-      <ListsWithMap/>
-      
+      {/* <ListsWithMap/> */}
+      <DynamicGrid/>
     </View>
   )
 }
