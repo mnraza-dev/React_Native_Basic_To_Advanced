@@ -5,6 +5,7 @@ import Lists from './components/Lists'
 import EffectsExample from './components/EffectsExample'
 import ListsWithMap from './components/ListsWithMap'
 import DynamicGrid from './components/DynamicGrid'
+import ClassComponents from './components/ClassComponents'
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       {/* <Lists/> */}
       {/* <EffectsExample/> */}
       {/* <ListsWithMap/> */}
-      <DynamicGrid/>
+      {/* <DynamicGrid/> */}
+      <ClassComponents />
     </View>
   )
 }
