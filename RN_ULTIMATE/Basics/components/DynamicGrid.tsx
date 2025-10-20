@@ -1,8 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
+import GridItem from "./GridItem";
 
 const users = [
-    { id: 1, name: "MN Raza", email: "mnraza@example.com", profession: "Software Engineer" },
+    { id: 1, name: "Md Noorullah Raza", email: "mnraza.dev@gmail.com", profession: "Software Engineer" },
     { id: 2, name: "Ayesha Khan", email: "ayesha@example.com", profession: "UI Designer" },
     { id: 3, name: "Rahul Sharma", email: "rahul@example.com", profession: "Data Analyst" },
     { id: 4, name: "Fatima Ali", email: "fatima@example.com", profession: "Backend Developer" },
@@ -38,11 +39,7 @@ const DynamicGrid = () => {
     return (
         <ScrollView contentContainerStyle={styles.container}>
             {users.map((item) => (
-                <View key={item.id} style={styles.gridItem}>
-                    <Text style={styles.text}>{item.name}</Text>
-                    <Text style={styles.email}>{item.email}</Text>
-                    <Text style={styles.profession}>{item.profession}</Text>
-                </View>
+                <GridItem item={item} />
             ))}
         </ScrollView>
     );
