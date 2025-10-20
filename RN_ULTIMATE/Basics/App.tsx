@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, Button, Alert } from 'react-native'
 import React from 'react'
 import UserData from './components/UserData'
 
@@ -7,6 +7,7 @@ const App = () => {
   return (
     <View style={{ backgroundColor: 'green' }}>
       <UserData/>
+      <Button title='Tap here' onPress={()=>Alert.alert("Hi There")}/>
     </View>
   )
 }
