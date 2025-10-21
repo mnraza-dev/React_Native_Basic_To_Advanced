@@ -1,4 +1,4 @@
-import { ActivityIndicator, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, Platform, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Forms from './components/Forms'
 import Lists from './components/Lists'
@@ -6,17 +6,14 @@ import EffectsExample from './components/EffectsExample'
 import ListsWithMap from './components/ListsWithMap'
 import DynamicGrid from './components/DynamicGrid'
 import ClassComponents from './components/ClassComponents'
+import PlatformExample from './components/PlatformExample'
 
 const App = () => {
   return (
 
-    <View style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}>
-    <StatusBar backgroundColor={'green'} hidden={false} barStyle={'dark-content'} />
-    
+    <View>
+      <StatusBar backgroundColor={'green'} hidden={false} barStyle={'dark-content'} />
+
       {/* <Forms/> */}
       {/* <Lists/> */}
       {/* <EffectsExample/> */}
@@ -24,11 +21,8 @@ const App = () => {
       {/* <DynamicGrid/> */}
       {/* <ClassComponents /> */}
       {/* <ActivityIndicator size={100} color={'green'} /> */}
-  
 
-
-
-
+    <PlatformExample/>
 
     </View>
   )
@@ -36,4 +30,6 @@ const App = () => {
 
 export default App
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+ 
+})
