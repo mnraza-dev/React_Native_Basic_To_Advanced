@@ -12,10 +12,10 @@ const App = () => {
     <View>
       {/* <Forms/> */}
       {/* <Lists/> */}
-      {/* <EffectsExample/> */}
+      <EffectsExample/>
       {/* <ListsWithMap/> */}
       {/* <DynamicGrid/> */}
-      <ClassComponents />
+      {/* <ClassComponents /> */}
     </View>
   )
 }

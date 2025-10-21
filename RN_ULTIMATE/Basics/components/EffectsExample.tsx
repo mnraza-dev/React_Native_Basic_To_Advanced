@@ -4,19 +4,30 @@ import React, { useState, useEffect } from 'react';
 const EffectsExample = () => {
     const [count, setCount] = useState(0);
 
+    const timer = setInterval(() => {
+        console.warn('Timer called');
+
+    }, 2000);
+
     useEffect(() => {
         console.warn('useEffect called — count changed:', count);
+
+        return () => {
+            clearInterval(timer)
+        }
+
+
     }, [count]);
 
     return (
         <View style={styles.container}>
-            <Text style={styles.heading}>useEffects in React Native</Text>
+            <Text style={styles.heading}>useEffect() in React Native</Text>
 
             <Text style={{ fontSize: 36, textAlign: 'center', marginBottom: 10, marginTop: 40, }}>Count: {count}</Text>
             <TouchableOpacity style={styles.btn} onPress={() => {
                 setCount(count + 1)
             }}>
-            <Text style={styles.btnText}>➕ Tap to Increase</Text>
+                <Text style={styles.btnText}>➕ Tap to Increase</Text>
             </TouchableOpacity>
         </View>
     );
