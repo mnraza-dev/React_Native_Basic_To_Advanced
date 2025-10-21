@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Forms from './components/Forms'
 import Lists from './components/Lists'
@@ -9,13 +9,21 @@ import ClassComponents from './components/ClassComponents'
 
 const App = () => {
   return (
-    <View>
+    <View style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
       {/* <Forms/> */}
       {/* <Lists/> */}
-      <EffectsExample/>
+      {/* <EffectsExample/> */}
       {/* <ListsWithMap/> */}
       {/* <DynamicGrid/> */}
       {/* <ClassComponents /> */}
+
+     
+      <ActivityIndicator size={100} color={'green'} />
+  
     </View>
   )
 }
